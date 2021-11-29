@@ -1,0 +1,130 @@
+.home {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  min-height: 100vh;
+  height: 100vh;
+  color: white;
+
+  &--detail {
+    position: absolute;
+    width: 5rem;
+    top: 0;
+    right: 0;
+    z-index: 10;
+  }
+
+  &--header {
+    position: relative;
+    width: calc(100% - 4rem);
+    height: 22vh;
+    min-height: 22vh;
+    padding: 4rem 2rem 0;
+    background-color: #0d324d;
+    border-bottom-left-radius: 38px;
+    border-bottom-right-radius: 38px;
+
+    h1 {
+      margin: 0 0 1rem;
+      font-size: 2.2rem;
+    }
+
+    h6 {
+      margin: 0.5rem 0 0;
+      font-weight: 400;
+      font-size: 1rem;
+    }
+
+    &--search {
+      position: absolute;
+      bottom: -1.5rem;
+      width: 80%;
+      display: flex;
+      align-items: center;
+      height: 3rem;
+      padding-left: 1rem;
+
+      background-color: #9BB1AF;
+      border-radius: 15px;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.45);
+
+      img {
+        width: 1.5rem;
+        margin-right: 0.5rem;
+      }
+
+      input {
+        width: 100%;
+        border: 0;
+        outline: 0;
+        background-color: transparent;
+        color: white;
+        font-weight: 400;
+
+        &::placeholder {
+          color: white;
+        }
+      }
+    }
+  }
+
+  &--body {
+    h5 {
+      margin-top: 3rem;
+      margin-left: 2rem;
+      margin-bottom: 0;
+      color: black;
+      font-size: 1.4rem;
+    }
+
+    &--item {
+      display: flex;
+      flex-direction: column;
+      max-width: 30%;
+
+      margin: 1.4rem;
+      padding: 1rem;
+      background: #DBDADA;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+      font-size: 1.2rem;
+
+      img {
+        margin: auto;
+      }
+
+      strong {
+        font-weight: 400;
+        color: #7FCE9A;
+      }
+
+      h6 {
+        margin: 0;
+        font-size: 1rem;
+      }
+
+      span {
+        color: #0d324d;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.home2 {
+  height: 100px;
+}
+
+.home4 {
+  height: 200px;
+  background: #7FCE9A;
+  transform: translateY(-70px);
+}
