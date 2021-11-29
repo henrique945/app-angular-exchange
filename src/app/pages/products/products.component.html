@@ -13,37 +13,14 @@
       <span>Choose a day</span>
     </div>
 
-    <div class="products--body--item">
+    <div *ngFor="let product of listProducts" class="products--body--item">
       <img src="assets/imgs/icon-people.png">
       <div class="products--body--item--info">
-        <span>Chave de fenda</span>
-        <a>(11) 97190-8333</a>
+        <span>{{product.name}}</span>
+        <a>{{product.phone}}</a>
       </div>
-      <strong>12:45</strong>
-    </div>
-    <div class="products--body--item">
-      <img src="assets/imgs/icon-people.png">
-      <div class="products--body--item--info">
-        <span>Bola de futebol</span>
-        <a>(19) 06235-8333</a>
-      </div>
-      <strong>16:23</strong>
-    </div>
-    <div class="products--body--item">
-      <img src="assets/imgs/icon-people.png">
-      <div class="products--body--item--info">
-        <span>Teclado mecânico</span>
-        <a>(15) 06235-2323</a>
-      </div>
-      <strong>18:02</strong>
-    </div>
-    <div class="products--body--item">
-      <img src="assets/imgs/icon-people.png">
-      <div class="products--body--item--info">
-        <span>Tesoura</span>
-        <a>(11) 19095-4435</a>
-      </div>
-      <strong>23:49</strong>
+      <strong *ngIf="product.isMine"><b>Yours</b></strong>
+      <strong *ngIf="!product.isMine">{{product.hour}}</strong>
     </div>
   </div>
 </div>

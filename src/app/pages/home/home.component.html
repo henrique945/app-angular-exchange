@@ -8,7 +8,7 @@
 
     <div class="home--header--search">
       <img src="assets/imgs/icon-search.png">
-      <input type="text" placeholder="Look for something to exchange">
+      <input type="text" placeholder="Look for something to exchange" [(ngModel)]="searchText">
     </div>
   </div>
 
@@ -17,22 +17,38 @@
 
     <div class="wrap">
 
-      <div class="home--body--item" routerLink="/products">
-        <p><strong>economy</strong> with your latest <strong>exchange</strong></p>
-        <img src="assets/imgs/home1.png">
-      </div>
-      <div class="home--body--item home2">
-        <img src="assets/imgs/home2.png">
-        <h6>your wish list</h6>
-      </div>
-      <div class="home--body--item home2">
-        <h6>HOW TO USE</h6>
-        <img src="assets/imgs/home3.png">
-      </div>
-      <div class="home--body--item home4">
-        <h6>MAP</h6>
-        <img src="assets/imgs/home4.png">
-        <span>search in the neighborhood</span>
+      <ng-container *ngIf="searchText === 'create'">
+        <div class="home--body--item" routerLink="/create/product">
+          <p><strong>Create</strong> your tool for exchanging</p>
+          <h1>+</h1>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="searchText !== 'create'">
+        <div class="home--body--item" routerLink="/products">
+          <p><strong>economy</strong> with your latest <strong>exchange</strong></p>
+          <img src="assets/imgs/home1.png">
+        </div>
+        <div class="home--body--item home2">
+          <img src="assets/imgs/home2.png">
+          <h6>your wish list</h6>
+        </div>
+        <div class="home--body--item home2">
+          <h6>HOW TO USE</h6>
+          <img src="assets/imgs/home3.png">
+        </div>
+        <div class="home--body--item home4">
+          <h6>MAP</h6>
+          <img src="assets/imgs/home4.png">
+          <span>search in the neighborhood</span>
+        </div>
+        <div class="home--body--item home5" routerLink="/create/product">
+          <p><strong>Create</strong> your tool for exchanging</p>
+          <h1>+</h1>
+        </div>
+      </ng-container>
+      <div class="home--body--item opacity-0">
+        <p><strong>Create</strong> your tool for exchanging</p>
+        <h1>+</h1>
       </div>
     </div>
   </div>

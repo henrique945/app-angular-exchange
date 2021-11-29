@@ -105,6 +105,13 @@
         font-size: 1rem;
       }
 
+      h1 {
+        margin: 0;
+        color: #7FCE9A;
+        font-size: 3rem;
+        margin: auto;
+      }
+
       span {
         color: #0d324d;
         font-size: 1rem;
@@ -127,4 +134,8 @@
   height: 200px;
   background: #7FCE9A;
   transform: translateY(-70px);
+}
+
+.home5 {
+  transform: translateY(-90px);
 }
