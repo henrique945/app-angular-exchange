@@ -100,9 +100,22 @@
         border: 10px solid #0d324d;
       }
 
+      &--info {
+        display: flex;
+        flex-direction: column;
+      }
+
       span {
         color: #0d324d;
         font-size: 1.2rem;
+        text-align: center;
+      }
+
+      a {
+        color: #7FCE9A;
+        text-align: center;
+        font-size: 0.9rem;
+        transform: translateY(10px);
       }
 
       strong {
